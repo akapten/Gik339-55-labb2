@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Mörk bakgrund */
+    color: #fff; /* Vit text */
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Använda grid-layout */
+    gap: 20px; /* Avstånd mellan element */
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .user-list li {
+    background-color: #444; /* Mörkare bakgrund för varje element */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Djupare skugga */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: black !important;
+  }
+  
+  
+  .user-list li h3, .user-list li p {
+    margin: 0;
+    color: #fff; /* Vit text inuti listan */
+  }
+  
+  /* Responsivitet för mindre skärmar */
+  @media (max-width: 1000px) {
+    .user-list {
+      grid-template-columns: 1fr; /* En kolumn på små skärmar */
+    }
+  }
